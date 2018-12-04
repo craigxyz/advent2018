@@ -1,8 +1,9 @@
 import re
-ledger = []
+
 count2 = 0
 count3 = 0
 
+ledger = []
 with open('input.txt', 'r') as f:
     for line in f.readlines():
         ledger.append(line.strip('\n'))
