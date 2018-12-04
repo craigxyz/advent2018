@@ -1,13 +1,13 @@
-total = 0
+current = 0
 
 with open('input.txt', 'r') as f:
     for line in f.readlines():
         operation = line[:1]
-        num = int(line[1:])
+        change = int(line[1:])
 
         if operation == '+':
-            total += num
+            current += change
         if operation == '-':
-            total -= num
+            current -= change
 
-print(total)
+print(current)
