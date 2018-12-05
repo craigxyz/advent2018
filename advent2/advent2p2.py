@@ -2,22 +2,15 @@ ledger = []
 
 with open('input.txt', 'r') as f:
     for line in f.readlines():
-        ledger.append(line.strip('\n'))
+        ledger.append(line)
 
-def compareStrings(s1,s2):
-    built = ''
-    for letter in s1:
-            if s2[s1.index(letter)] == letter:
-                built = built + s1[0:1]
-                s1 = s1[1:]
-                s2 = s2[1:]
-    if len(s1) == 1:
-        print(built)
-
-for barcode in ledger:
-    for barcode2 in ledger:
-        if barcode != barcode2:
-            compareStrings(barcode,barcode2)
-
+for x in ledger:
+    for y in ledger:
+        diff = 0
+        for count,val in enumerate(x):
+            if val != y[count]:
+                diff += 1
+        if diff == 1:
+            ans = [val for count, val in enumerate(x) if y[count] == val]
+            print(''.join(ans))
             
-
