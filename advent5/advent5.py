@@ -9,6 +9,6 @@ def react(polymer):
             polymer = polymer.replace(each+each.upper(),"") 
             polymer = polymer.replace(each.upper()+each,"")
             length = len(polymer) # Length is set after replacements
-    print(length)
+    return(length)
 
-react(data)
+print(react(data))
