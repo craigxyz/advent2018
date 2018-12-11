@@ -11,4 +11,4 @@ def react(polymer):
             length = len(polymer) # Length is set after replacements
     print(length)
 
-print(react(data))
+react(data)
